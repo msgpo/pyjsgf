@@ -385,7 +385,7 @@ def get_exp_parser():
     # Define tag text to one or more words defined by a regular expression.
     # Escaped brace characters ('\{' or '\}') are allowed in tag text.
     tag_text = OneOrMore(
-        Regex(r"([\w\-\\']|\\{|\\})+", re.UNICODE).setName("tag text")
+        Regex(r"([\w\-\\':]|\\{|\\})+", re.UNICODE).setName("tag text")
     )
     tag = lcurl + tag_text + rcurl
 
